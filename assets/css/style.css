@@ -25,17 +25,19 @@ body {
 }
 #calculator {
     width: 400px;
-    height: 600px;
     background-color: white;
     box-shadow: 1px 1px 10px rgb(59, 58, 58);
 }
 #result {
-    height: 30%;
     background-color: rgba(71, 189, 154, 0.26);
+    text-align: right;
+    padding: 0 24px;
+    font-size: 36px;
+    min-height: 180px;
+    line-height: 180px;
 }
 #btns {
-    height: 70%;
-    /* background-color: aqua; */
+    height: 400px;
     display: flex;
 }
 #numbers, 
