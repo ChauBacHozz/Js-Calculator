@@ -3,10 +3,20 @@
     margin: 0;
     box-sizing: border-box;
 }
- 
+html {
+    font-family: sans-serif;
+}
 body {
     background-color: salmon;
 }
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+.grid-row-span-2 {
+    grid-row: span 2;
+
+}
+
 #main {
     display: flex;
     justify-content: center;
@@ -17,35 +27,43 @@ body {
     width: 400px;
     height: 600px;
     background-color: white;
+    box-shadow: 1px 1px 10px rgb(59, 58, 58);
 }
 #result {
     height: 30%;
     background-color: rgba(71, 189, 154, 0.26);
 }
 #btns {
+    height: 70%;
+    /* background-color: aqua; */
     display: flex;
 }
 #numbers, 
 #operations {
     flex: 1;
     font-size: 24px;
-    display: inline-block;
+    display: grid;
     list-style-type: none;
 }
 #numbers {
+    grid-template-columns: repeat(3, 1fr);
     flex-grow: 1.5;
 }
 #operations {
-    flex-shrink: 4;
 }
-#numbers li {
-    display: inline-block;
-    padding: 16px 24px;
-}
+#numbers li,
 #operations li {
     text-align: center;
     display: inline-block;
-    width: 100%;
-    height: 25%;
-    line-height: 100%;
+}
+#numbers li:hover,
+#operations li:hover {
+    background-color: rgb(134, 156, 156);
+    cursor: pointer;
+}
+#numbers li {
+    line-height: 400%;
+}
+#operations li {
+    line-height: 230%;
 }
