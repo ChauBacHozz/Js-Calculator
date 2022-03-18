@@ -1,7 +1,14 @@
 const res = document.querySelector('#result');
 const nums = document.querySelectorAll('.btn');
+res.innerHTML = '';
 for (let num of nums) {
     num.onclick = function() {
+        if (num.innerHTML == 'x' ||
+        num.innerHTML == '/' ||
+        num.innerHTML == '+' ||
+        num.innerHTML == '-' ) {
+            equal();
+        }
         res.innerHTML += num.innerHTML;
     }
 }
@@ -13,8 +20,11 @@ function clean() {
     res.innerHTML = '';
 }
 function equal() {
-    let result = res.innerHTML;
-    let output = eval('3*3');
-    console.log(output);
-    res.innerHTML = output;
+    console.log(res);
+    if (res.innerHTML !== '') {
+        let result = res.innerHTML;
+        let output = result.replace('x', '*');
+        let actual_output = eval(output);
+        res.innerHTML = actual_output;
+    }
 }

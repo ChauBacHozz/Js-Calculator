@@ -24,7 +24,7 @@ body {
     min-height: 100vh;
 }
 #calculator {
-    width: 400px;
+    width: 350px;
     background-color: white;
     box-shadow: 1px 1px 10px rgb(59, 58, 58);
 }
